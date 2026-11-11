@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ParcelTrack.GUI/ParcelTrack.GUI.csproj" Id="94387226-7a4f-4681-a3d9-1a53292bb599" />
+  <Project Path="ParcelTracker.Library/ParcelTracker.Library.csproj" />
+</Solution>
