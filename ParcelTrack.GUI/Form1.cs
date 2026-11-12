@@ -20,6 +20,8 @@ namespace ParcelTrack.GUI
         private readonly TrackingManager _trackingManager =
             new TrackingManager();
 
+        public event Action ParcelStatusChanged;
+
         private readonly ShippingCalculator _shippingCalculator =
             new ShippingCalculator();
         private UpdateStatusForm _updateStatusPage;
@@ -98,6 +100,8 @@ namespace ParcelTrack.GUI
                     parcel.TrackingNumber,
                     parcel.Sender.Name,
                     parcel.Recipient.Name,
+                    parcel.Sender.Address,
+                    parcel.Recipient.Address,
                     parcel.WeightKg,
                     parcel.DeliveryServiceName,
                     parcel.Status.ToString());
@@ -382,6 +386,8 @@ namespace ParcelTrack.GUI
                 // 10. Add event to tracking history
                 _trackingManager.AddTrackingEvent(parcel, initialEvent);
 
+                ParcelStatusChanged?.Invoke();
+
                 // 11. Save parcel data
                 _parcelStorage.Save(_parcelTracker.Parcels);
 
@@ -398,6 +404,8 @@ namespace ParcelTrack.GUI
                     parcel.TrackingNumber,
                     parcel.Sender.Name,
                     parcel.Recipient.Name,
+                    parcel.Sender.Address,
+                    parcel.Recipient.Address,
                     parcel.WeightKg,
                     parcel.DeliveryServiceName,
                     parcel.Status.ToString());
@@ -516,6 +524,27 @@ namespace ParcelTrack.GUI
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
+        }
+        public void RefreshParcelRecords()
+        {
+            foreach (DataGridViewRow row in dgvParcels.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                string trackingNumber =
+                    row.Cells[0].Value?.ToString();
+
+                Parcel parcel = _parcelTracker.FindParcel(trackingNumber);
+
+                if (parcel != null)
+                {
+                    row.Cells[7].Value = parcel.Status.ToString();
+                }
+            }
+
+            UpdateDashboardStatistics();
+
+            _parcelStorage.Save(_parcelTracker.Parcels);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -650,6 +679,8 @@ namespace ParcelTrack.GUI
                     _trackingManager,
                     true); // 'true' triggers embedded mode
 
+                _updateStatusPage.ParcelStatusChanged += RefreshParcelRecords;
+
                 _updateStatusPage.TopLevel = false;
                 _updateStatusPage.FormBorderStyle = FormBorderStyle.None;
                 _updateStatusPage.Dock = DockStyle.Fill; // Fills pnlPageContent completely
@@ -723,6 +754,11 @@ namespace ParcelTrack.GUI
         }
 
         private void txtSearchTrackingNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlEstimateFees_Paint(object sender, PaintEventArgs e)
         {
 
         }

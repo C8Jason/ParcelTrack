@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             this.pnlSideBar = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnClearAllParcels = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnUpdateStatus = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnDoashboard = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlTotal = new System.Windows.Forms.Panel();
             this.lblTotalParcels = new System.Windows.Forms.Label();
             this.lblTotalTitle = new System.Windows.Forms.Label();
@@ -71,18 +76,13 @@
             this.lblRegisterNewParcel = new System.Windows.Forms.Label();
             this.pnlUnderParcelRecords = new System.Windows.Forms.Panel();
             this.dgvParcels = new System.Windows.Forms.DataGridView();
-            this.colTrackingNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRecipient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colService = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlFindParcel = new System.Windows.Forms.Panel();
             this.lblFindParcel = new System.Windows.Forms.Label();
             this.pnlUnderFindParcel = new System.Windows.Forms.Panel();
             this.btnSearchParcel = new System.Windows.Forms.Button();
             this.txtSearchTrackingNumber = new System.Windows.Forms.TextBox();
             this.lblFindParcelByTrackingNumber = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnlTrackingHistory = new System.Windows.Forms.Panel();
             this.lblTrackingHistory = new System.Windows.Forms.Label();
             this.pnlUnderTrackingHistory = new System.Windows.Forms.Panel();
@@ -105,15 +105,21 @@
             this.lblDeliveryServiceUnderShippingCalculator = new System.Windows.Forms.Label();
             this.lblWeightForShippingCalculator = new System.Windows.Forms.Label();
             this.pnlRegisterPage = new System.Windows.Forms.Panel();
-            this.btnClearAllParcels = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.colTrackingNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRecipient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSenderAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRecipientAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colService = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlSideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTotal.SuspendLayout();
             this.pnlInTransit.SuspendLayout();
             this.pnlDelivered.SuspendLayout();
@@ -125,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvParcels)).BeginInit();
             this.pnlFindParcel.SuspendLayout();
             this.pnlUnderFindParcel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnlTrackingHistory.SuspendLayout();
             this.pnlUnderTrackingHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrackingHistory)).BeginInit();
@@ -134,11 +141,6 @@
             this.pnlUnderShippingCalculator.SuspendLayout();
             this.pnlEstimateFees.SuspendLayout();
             this.pnlRegisterPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,13 +161,56 @@
             this.pnlSideBar.Size = new System.Drawing.Size(250, 861);
             this.pnlSideBar.TabIndex = 0;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::ParcelTrack.GUI.Properties.Resources.Glossy_Red_Warning_Exclamation_Icon;
+            this.pictureBox4.Location = new System.Drawing.Point(62, 503);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(132, 93);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnClearAllParcels
+            // 
+            this.btnClearAllParcels.BackColor = System.Drawing.Color.Red;
+            this.btnClearAllParcels.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearAllParcels.Location = new System.Drawing.Point(12, 598);
+            this.btnClearAllParcels.Name = "btnClearAllParcels";
+            this.btnClearAllParcels.Size = new System.Drawing.Size(230, 64);
+            this.btnClearAllParcels.TabIndex = 9;
+            this.btnClearAllParcels.Text = "Clear All Parcel";
+            this.btnClearAllParcels.UseVisualStyleBackColor = false;
+            this.btnClearAllParcels.Click += new System.EventHandler(this.btnClearAllParcels_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ParcelTrack.GUI.Properties.Resources.Blue_Location_Pin_with_Shipping_Boxes;
+            this.pictureBox3.Location = new System.Drawing.Point(-47, 670);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(335, 190);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ParcelTrack.GUI.Properties.Resources.ParcelTrack_Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(20, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(210, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnUpdateStatus
             // 
             this.btnUpdateStatus.BackColor = System.Drawing.Color.SteelBlue;
             this.btnUpdateStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStatus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateStatus.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateStatus.Location = new System.Drawing.Point(20, 255);
+            this.btnUpdateStatus.Location = new System.Drawing.Point(20, 272);
             this.btnUpdateStatus.Name = "btnUpdateStatus";
             this.btnUpdateStatus.Size = new System.Drawing.Size(210, 50);
             this.btnUpdateStatus.TabIndex = 8;
@@ -179,7 +224,7 @@
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(20, 195);
+            this.btnRegister.Location = new System.Drawing.Point(20, 201);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(210, 50);
             this.btnRegister.TabIndex = 7;
@@ -212,6 +257,16 @@
             this.pnlHeader.Size = new System.Drawing.Size(1494, 95);
             this.pnlHeader.TabIndex = 1;
             this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ParcelTrack.GUI.Properties.Resources.ParcelTrack_Delivery_Tracking_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(433, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlTotal
             // 
@@ -562,7 +617,7 @@
             this.pnlParcelRecords.Controls.Add(this.lblParcelRecords);
             this.pnlParcelRecords.Location = new System.Drawing.Point(294, 235);
             this.pnlParcelRecords.Name = "pnlParcelRecords";
-            this.pnlParcelRecords.Size = new System.Drawing.Size(809, 61);
+            this.pnlParcelRecords.Size = new System.Drawing.Size(865, 61);
             this.pnlParcelRecords.TabIndex = 15;
             // 
             // lblParcelRecords
@@ -570,7 +625,7 @@
             this.lblParcelRecords.AutoSize = true;
             this.lblParcelRecords.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblParcelRecords.ForeColor = System.Drawing.Color.Black;
-            this.lblParcelRecords.Location = new System.Drawing.Point(308, 13);
+            this.lblParcelRecords.Location = new System.Drawing.Point(355, 11);
             this.lblParcelRecords.Name = "lblParcelRecords";
             this.lblParcelRecords.Size = new System.Drawing.Size(174, 32);
             this.lblParcelRecords.TabIndex = 15;
@@ -606,7 +661,7 @@
             this.pnlUnderParcelRecords.Controls.Add(this.dgvParcels);
             this.pnlUnderParcelRecords.Location = new System.Drawing.Point(294, 284);
             this.pnlUnderParcelRecords.Name = "pnlUnderParcelRecords";
-            this.pnlUnderParcelRecords.Size = new System.Drawing.Size(809, 285);
+            this.pnlUnderParcelRecords.Size = new System.Drawing.Size(865, 285);
             this.pnlUnderParcelRecords.TabIndex = 17;
             // 
             // dgvParcels
@@ -619,6 +674,8 @@
             this.colTrackingNo,
             this.colSender,
             this.colRecipient,
+            this.colSenderAddress,
+            this.colRecipientAddress,
             this.colWeight,
             this.colService,
             this.colStatus});
@@ -628,45 +685,9 @@
             this.dgvParcels.ReadOnly = true;
             this.dgvParcels.RowHeadersVisible = false;
             this.dgvParcels.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvParcels.Size = new System.Drawing.Size(783, 260);
+            this.dgvParcels.Size = new System.Drawing.Size(839, 260);
             this.dgvParcels.TabIndex = 0;
             this.dgvParcels.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParcels_CellClick);
-            // 
-            // colTrackingNo
-            // 
-            this.colTrackingNo.HeaderText = "Tracking No.";
-            this.colTrackingNo.Name = "colTrackingNo";
-            this.colTrackingNo.ReadOnly = true;
-            // 
-            // colSender
-            // 
-            this.colSender.HeaderText = "Sender";
-            this.colSender.Name = "colSender";
-            this.colSender.ReadOnly = true;
-            // 
-            // colRecipient
-            // 
-            this.colRecipient.HeaderText = "Recipient";
-            this.colRecipient.Name = "colRecipient";
-            this.colRecipient.ReadOnly = true;
-            // 
-            // colWeight
-            // 
-            this.colWeight.HeaderText = "Weight";
-            this.colWeight.Name = "colWeight";
-            this.colWeight.ReadOnly = true;
-            // 
-            // colService
-            // 
-            this.colService.HeaderText = "Service";
-            this.colService.Name = "colService";
-            this.colService.ReadOnly = true;
-            // 
-            // colStatus
-            // 
-            this.colStatus.HeaderText = "Status";
-            this.colStatus.Name = "colStatus";
-            this.colStatus.ReadOnly = true;
             // 
             // pnlFindParcel
             // 
@@ -727,6 +748,16 @@
             this.lblFindParcelByTrackingNumber.Size = new System.Drawing.Size(156, 25);
             this.lblFindParcelByTrackingNumber.TabIndex = 0;
             this.lblFindParcelByTrackingNumber.Text = "Tracking Number";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::ParcelTrack.GUI.Properties.Resources.Pastel_Parcel_Tracking_Illustration;
+            this.pictureBox5.Location = new System.Drawing.Point(-3, 4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(463, 217);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
             // 
             // pnlTrackingHistory
             // 
@@ -808,9 +839,9 @@
             // 
             this.pnlShippingCalculator.BackColor = System.Drawing.Color.IndianRed;
             this.pnlShippingCalculator.Controls.Add(this.lblShippingCalculator);
-            this.pnlShippingCalculator.Location = new System.Drawing.Point(1137, 235);
+            this.pnlShippingCalculator.Location = new System.Drawing.Point(1192, 235);
             this.pnlShippingCalculator.Name = "pnlShippingCalculator";
-            this.pnlShippingCalculator.Size = new System.Drawing.Size(547, 46);
+            this.pnlShippingCalculator.Size = new System.Drawing.Size(492, 46);
             this.pnlShippingCalculator.TabIndex = 22;
             // 
             // lblShippingCalculator
@@ -866,9 +897,9 @@
             this.pnlUnderShippingCalculator.Controls.Add(this.txtCalcWeight);
             this.pnlUnderShippingCalculator.Controls.Add(this.lblDeliveryServiceUnderShippingCalculator);
             this.pnlUnderShippingCalculator.Controls.Add(this.lblWeightForShippingCalculator);
-            this.pnlUnderShippingCalculator.Location = new System.Drawing.Point(1137, 282);
+            this.pnlUnderShippingCalculator.Location = new System.Drawing.Point(1192, 282);
             this.pnlUnderShippingCalculator.Name = "pnlUnderShippingCalculator";
-            this.pnlUnderShippingCalculator.Size = new System.Drawing.Size(547, 283);
+            this.pnlUnderShippingCalculator.Size = new System.Drawing.Size(492, 283);
             this.pnlUnderShippingCalculator.TabIndex = 27;
             // 
             // btnCalculateFee
@@ -887,10 +918,11 @@
             this.pnlEstimateFees.BackColor = System.Drawing.Color.Linen;
             this.pnlEstimateFees.Controls.Add(this.lblEstimatedFee);
             this.pnlEstimateFees.Controls.Add(this.lblEstimateFeesTitle);
-            this.pnlEstimateFees.Location = new System.Drawing.Point(69, 121);
+            this.pnlEstimateFees.Location = new System.Drawing.Point(49, 121);
             this.pnlEstimateFees.Name = "pnlEstimateFees";
-            this.pnlEstimateFees.Size = new System.Drawing.Size(413, 95);
+            this.pnlEstimateFees.Size = new System.Drawing.Size(390, 95);
             this.pnlEstimateFees.TabIndex = 25;
+            this.pnlEstimateFees.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlEstimateFees_Paint);
             // 
             // lblEstimatedFee
             // 
@@ -917,7 +949,7 @@
             // 
             this.cmbCalcService.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCalcService.FormattingEnabled = true;
-            this.cmbCalcService.Location = new System.Drawing.Point(100, 94);
+            this.cmbCalcService.Location = new System.Drawing.Point(82, 94);
             this.cmbCalcService.Name = "cmbCalcService";
             this.cmbCalcService.Size = new System.Drawing.Size(339, 21);
             this.cmbCalcService.TabIndex = 24;
@@ -925,7 +957,7 @@
             // 
             // txtCalcWeight
             // 
-            this.txtCalcWeight.Location = new System.Drawing.Point(100, 38);
+            this.txtCalcWeight.Location = new System.Drawing.Point(82, 38);
             this.txtCalcWeight.Name = "txtCalcWeight";
             this.txtCalcWeight.Size = new System.Drawing.Size(339, 20);
             this.txtCalcWeight.TabIndex = 26;
@@ -935,7 +967,7 @@
             // 
             this.lblDeliveryServiceUnderShippingCalculator.AutoSize = true;
             this.lblDeliveryServiceUnderShippingCalculator.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeliveryServiceUnderShippingCalculator.Location = new System.Drawing.Point(211, 74);
+            this.lblDeliveryServiceUnderShippingCalculator.Location = new System.Drawing.Point(191, 77);
             this.lblDeliveryServiceUnderShippingCalculator.Name = "lblDeliveryServiceUnderShippingCalculator";
             this.lblDeliveryServiceUnderShippingCalculator.Size = new System.Drawing.Size(99, 17);
             this.lblDeliveryServiceUnderShippingCalculator.TabIndex = 23;
@@ -945,7 +977,7 @@
             // 
             this.lblWeightForShippingCalculator.AutoSize = true;
             this.lblWeightForShippingCalculator.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeightForShippingCalculator.Location = new System.Drawing.Point(221, 18);
+            this.lblWeightForShippingCalculator.Location = new System.Drawing.Point(204, 18);
             this.lblWeightForShippingCalculator.Name = "lblWeightForShippingCalculator";
             this.lblWeightForShippingCalculator.Size = new System.Drawing.Size(74, 17);
             this.lblWeightForShippingCalculator.TabIndex = 22;
@@ -964,69 +996,6 @@
             this.pnlRegisterPage.TabIndex = 28;
             this.pnlRegisterPage.Visible = false;
             // 
-            // btnClearAllParcels
-            // 
-            this.btnClearAllParcels.BackColor = System.Drawing.Color.Red;
-            this.btnClearAllParcels.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearAllParcels.Location = new System.Drawing.Point(12, 598);
-            this.btnClearAllParcels.Name = "btnClearAllParcels";
-            this.btnClearAllParcels.Size = new System.Drawing.Size(230, 64);
-            this.btnClearAllParcels.TabIndex = 9;
-            this.btnClearAllParcels.Text = "Clear All Parcel";
-            this.btnClearAllParcels.UseVisualStyleBackColor = false;
-            this.btnClearAllParcels.Click += new System.EventHandler(this.btnClearAllParcels_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ParcelTrack.GUI.Properties.Resources.ParcelTrack_Delivery_Tracking_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(433, 92);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::ParcelTrack.GUI.Properties.Resources.Glossy_Red_Warning_Exclamation_Icon;
-            this.pictureBox4.Location = new System.Drawing.Point(62, 503);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(132, 93);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ParcelTrack.GUI.Properties.Resources.Blue_Location_Pin_with_Shipping_Boxes;
-            this.pictureBox3.Location = new System.Drawing.Point(-47, 670);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(335, 190);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ParcelTrack.GUI.Properties.Resources.ParcelTrack_Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(210, 97);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ParcelTrack.GUI.Properties.Resources.Pastel_Parcel_Tracking_Illustration;
-            this.pictureBox5.Location = new System.Drawing.Point(-3, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(463, 217);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::ParcelTrack.GUI.Properties.Resources.Cartoon_Parcel_Delivery_Route;
@@ -1036,6 +1005,54 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 28;
             this.pictureBox6.TabStop = false;
+            // 
+            // colTrackingNo
+            // 
+            this.colTrackingNo.HeaderText = "Tracking No.";
+            this.colTrackingNo.Name = "colTrackingNo";
+            this.colTrackingNo.ReadOnly = true;
+            // 
+            // colSender
+            // 
+            this.colSender.HeaderText = "Sender";
+            this.colSender.Name = "colSender";
+            this.colSender.ReadOnly = true;
+            // 
+            // colRecipient
+            // 
+            this.colRecipient.HeaderText = "Recipient";
+            this.colRecipient.Name = "colRecipient";
+            this.colRecipient.ReadOnly = true;
+            // 
+            // colSenderAddress
+            // 
+            this.colSenderAddress.HeaderText = "Sender Address";
+            this.colSenderAddress.Name = "colSenderAddress";
+            this.colSenderAddress.ReadOnly = true;
+            // 
+            // colRecipientAddress
+            // 
+            this.colRecipientAddress.HeaderText = "Recipient Address";
+            this.colRecipientAddress.Name = "colRecipientAddress";
+            this.colRecipientAddress.ReadOnly = true;
+            // 
+            // colWeight
+            // 
+            this.colWeight.HeaderText = "Weight";
+            this.colWeight.Name = "colWeight";
+            this.colWeight.ReadOnly = true;
+            // 
+            // colService
+            // 
+            this.colService.HeaderText = "Service";
+            this.colService.Name = "colService";
+            this.colService.ReadOnly = true;
+            // 
+            // colStatus
+            // 
+            this.colStatus.HeaderText = "Status";
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
             // 
             // MainForm
             // 
@@ -1052,7 +1069,11 @@
             this.Text = "ParcelTracker -Parcel Delivery Tracking System";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnlSideBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTotal.ResumeLayout(false);
             this.pnlTotal.PerformLayout();
             this.pnlInTransit.ResumeLayout(false);
@@ -1073,6 +1094,7 @@
             this.pnlFindParcel.PerformLayout();
             this.pnlUnderFindParcel.ResumeLayout(false);
             this.pnlUnderFindParcel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnlTrackingHistory.ResumeLayout(false);
             this.pnlTrackingHistory.PerformLayout();
             this.pnlUnderTrackingHistory.ResumeLayout(false);
@@ -1086,11 +1108,6 @@
             this.pnlEstimateFees.ResumeLayout(false);
             this.pnlEstimateFees.PerformLayout();
             this.pnlRegisterPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1153,12 +1170,6 @@
         private System.Windows.Forms.Label lblShippingCalculator;
         private System.Windows.Forms.Label lblTotalParcels;
         private System.Windows.Forms.DataGridView dgvParcels;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTrackingNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colRecipient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colWeight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colService;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDateTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocation;
@@ -1183,6 +1194,14 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTrackingNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRecipient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSenderAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRecipientAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colWeight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colService;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
     }
 }
 

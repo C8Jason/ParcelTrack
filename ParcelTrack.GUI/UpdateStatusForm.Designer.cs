@@ -73,6 +73,12 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblRecipientAddress = new System.Windows.Forms.Label();
+            this.lblSenderAddress = new System.Windows.Forms.Label();
+            this.lblCurrentLocation = new System.Windows.Forms.Label();
+            this.lblSenderAddressValue = new System.Windows.Forms.Label();
+            this.lblRecipientAddressValue = new System.Windows.Forms.Label();
+            this.lblCurrentLocationValue = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSideBar.SuspendLayout();
@@ -149,7 +155,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(20, 259);
+            this.btnUpdate.Location = new System.Drawing.Point(20, 272);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(210, 50);
             this.btnUpdate.TabIndex = 8;
@@ -168,6 +174,7 @@
             this.btnRegister.TabIndex = 7;
             this.btnRegister.Text = "Register Parcel";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnD0ashBoard
             // 
@@ -397,6 +404,12 @@
             // pnlUnderParcelDetails
             // 
             this.pnlUnderParcelDetails.BackColor = System.Drawing.Color.PeachPuff;
+            this.pnlUnderParcelDetails.Controls.Add(this.lblCurrentLocationValue);
+            this.pnlUnderParcelDetails.Controls.Add(this.lblRecipientAddressValue);
+            this.pnlUnderParcelDetails.Controls.Add(this.lblSenderAddressValue);
+            this.pnlUnderParcelDetails.Controls.Add(this.lblCurrentLocation);
+            this.pnlUnderParcelDetails.Controls.Add(this.lblSenderAddress);
+            this.pnlUnderParcelDetails.Controls.Add(this.lblRecipientAddress);
             this.pnlUnderParcelDetails.Controls.Add(this.lblRegisteredDateValue);
             this.pnlUnderParcelDetails.Controls.Add(this.lblDeliveryServiceValue);
             this.pnlUnderParcelDetails.Controls.Add(this.lblWeightValue);
@@ -416,7 +429,7 @@
             // 
             this.lblRegisteredDateValue.AutoSize = true;
             this.lblRegisteredDateValue.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisteredDateValue.Location = new System.Drawing.Point(202, 178);
+            this.lblRegisteredDateValue.Location = new System.Drawing.Point(202, 280);
             this.lblRegisteredDateValue.Name = "lblRegisteredDateValue";
             this.lblRegisteredDateValue.Size = new System.Drawing.Size(20, 25);
             this.lblRegisteredDateValue.TabIndex = 9;
@@ -426,7 +439,7 @@
             // 
             this.lblDeliveryServiceValue.AutoSize = true;
             this.lblDeliveryServiceValue.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeliveryServiceValue.Location = new System.Drawing.Point(202, 138);
+            this.lblDeliveryServiceValue.Location = new System.Drawing.Point(202, 241);
             this.lblDeliveryServiceValue.Name = "lblDeliveryServiceValue";
             this.lblDeliveryServiceValue.Size = new System.Drawing.Size(20, 25);
             this.lblDeliveryServiceValue.TabIndex = 8;
@@ -436,7 +449,7 @@
             // 
             this.lblWeightValue.AutoSize = true;
             this.lblWeightValue.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeightValue.Location = new System.Drawing.Point(202, 98);
+            this.lblWeightValue.Location = new System.Drawing.Point(202, 201);
             this.lblWeightValue.Name = "lblWeightValue";
             this.lblWeightValue.Size = new System.Drawing.Size(20, 25);
             this.lblWeightValue.TabIndex = 7;
@@ -446,7 +459,7 @@
             // 
             this.lblRecipientNameValue.AutoSize = true;
             this.lblRecipientNameValue.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecipientNameValue.Location = new System.Drawing.Point(202, 59);
+            this.lblRecipientNameValue.Location = new System.Drawing.Point(202, 89);
             this.lblRecipientNameValue.Name = "lblRecipientNameValue";
             this.lblRecipientNameValue.Size = new System.Drawing.Size(20, 25);
             this.lblRecipientNameValue.TabIndex = 6;
@@ -456,17 +469,18 @@
             // 
             this.lblSenderNameValue.AutoSize = true;
             this.lblSenderNameValue.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenderNameValue.Location = new System.Drawing.Point(202, 19);
+            this.lblSenderNameValue.Location = new System.Drawing.Point(202, 17);
             this.lblSenderNameValue.Name = "lblSenderNameValue";
             this.lblSenderNameValue.Size = new System.Drawing.Size(20, 25);
             this.lblSenderNameValue.TabIndex = 5;
             this.lblSenderNameValue.Text = "-";
+            this.lblSenderNameValue.Click += new System.EventHandler(this.lblSenderNameValue_Click);
             // 
             // lblRegisteredDate
             // 
             this.lblRegisteredDate.AutoSize = true;
             this.lblRegisteredDate.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisteredDate.Location = new System.Drawing.Point(13, 178);
+            this.lblRegisteredDate.Location = new System.Drawing.Point(12, 280);
             this.lblRegisteredDate.Name = "lblRegisteredDate";
             this.lblRegisteredDate.Size = new System.Drawing.Size(150, 25);
             this.lblRegisteredDate.TabIndex = 4;
@@ -476,7 +490,7 @@
             // 
             this.lblDeliveryService.AutoSize = true;
             this.lblDeliveryService.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeliveryService.Location = new System.Drawing.Point(13, 138);
+            this.lblDeliveryService.Location = new System.Drawing.Point(12, 241);
             this.lblDeliveryService.Name = "lblDeliveryService";
             this.lblDeliveryService.Size = new System.Drawing.Size(149, 25);
             this.lblDeliveryService.TabIndex = 3;
@@ -486,7 +500,7 @@
             // 
             this.lblWeight.AutoSize = true;
             this.lblWeight.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeight.Location = new System.Drawing.Point(13, 98);
+            this.lblWeight.Location = new System.Drawing.Point(12, 201);
             this.lblWeight.Name = "lblWeight";
             this.lblWeight.Size = new System.Drawing.Size(112, 25);
             this.lblWeight.TabIndex = 2;
@@ -496,7 +510,7 @@
             // 
             this.lblRecipientName.AutoSize = true;
             this.lblRecipientName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecipientName.Location = new System.Drawing.Point(13, 59);
+            this.lblRecipientName.Location = new System.Drawing.Point(13, 89);
             this.lblRecipientName.Name = "lblRecipientName";
             this.lblRecipientName.Size = new System.Drawing.Size(150, 25);
             this.lblRecipientName.TabIndex = 1;
@@ -590,6 +604,66 @@
             this.colDescription.Name = "colDescription";
             this.colDescription.ReadOnly = true;
             // 
+            // lblRecipientAddress
+            // 
+            this.lblRecipientAddress.AutoSize = true;
+            this.lblRecipientAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecipientAddress.Location = new System.Drawing.Point(13, 126);
+            this.lblRecipientAddress.Name = "lblRecipientAddress";
+            this.lblRecipientAddress.Size = new System.Drawing.Size(165, 25);
+            this.lblRecipientAddress.TabIndex = 10;
+            this.lblRecipientAddress.Text = "Recipient Address";
+            // 
+            // lblSenderAddress
+            // 
+            this.lblSenderAddress.AutoSize = true;
+            this.lblSenderAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenderAddress.Location = new System.Drawing.Point(12, 54);
+            this.lblSenderAddress.Name = "lblSenderAddress";
+            this.lblSenderAddress.Size = new System.Drawing.Size(144, 25);
+            this.lblSenderAddress.TabIndex = 11;
+            this.lblSenderAddress.Text = "Sender Address";
+            // 
+            // lblCurrentLocation
+            // 
+            this.lblCurrentLocation.AutoSize = true;
+            this.lblCurrentLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentLocation.Location = new System.Drawing.Point(12, 162);
+            this.lblCurrentLocation.Name = "lblCurrentLocation";
+            this.lblCurrentLocation.Size = new System.Drawing.Size(161, 25);
+            this.lblCurrentLocation.TabIndex = 12;
+            this.lblCurrentLocation.Text = "Current  Location";
+            // 
+            // lblSenderAddressValue
+            // 
+            this.lblSenderAddressValue.AutoSize = true;
+            this.lblSenderAddressValue.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenderAddressValue.Location = new System.Drawing.Point(202, 54);
+            this.lblSenderAddressValue.Name = "lblSenderAddressValue";
+            this.lblSenderAddressValue.Size = new System.Drawing.Size(20, 25);
+            this.lblSenderAddressValue.TabIndex = 13;
+            this.lblSenderAddressValue.Text = "-";
+            // 
+            // lblRecipientAddressValue
+            // 
+            this.lblRecipientAddressValue.AutoSize = true;
+            this.lblRecipientAddressValue.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecipientAddressValue.Location = new System.Drawing.Point(202, 125);
+            this.lblRecipientAddressValue.Name = "lblRecipientAddressValue";
+            this.lblRecipientAddressValue.Size = new System.Drawing.Size(20, 25);
+            this.lblRecipientAddressValue.TabIndex = 14;
+            this.lblRecipientAddressValue.Text = "-";
+            // 
+            // lblCurrentLocationValue
+            // 
+            this.lblCurrentLocationValue.AutoSize = true;
+            this.lblCurrentLocationValue.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentLocationValue.Location = new System.Drawing.Point(202, 162);
+            this.lblCurrentLocationValue.Name = "lblCurrentLocationValue";
+            this.lblCurrentLocationValue.Size = new System.Drawing.Size(20, 25);
+            this.lblCurrentLocationValue.TabIndex = 15;
+            this.lblCurrentLocationValue.Text = "-";
+            // 
             // UpdateStatusForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -677,5 +751,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescription;
+        private System.Windows.Forms.Label lblCurrentLocationValue;
+        private System.Windows.Forms.Label lblRecipientAddressValue;
+        private System.Windows.Forms.Label lblSenderAddressValue;
+        private System.Windows.Forms.Label lblCurrentLocation;
+        private System.Windows.Forms.Label lblSenderAddress;
+        private System.Windows.Forms.Label lblRecipientAddress;
     }
 }

@@ -16,12 +16,14 @@ namespace ParcelTrack.GUI
     {
         private readonly ParcelTracker _parcelTracker;
         private readonly TrackingManager _trackingManager;
+
+        public event Action ParcelStatusChanged;
         public UpdateStatusForm()
         {
             InitializeComponent();
 
             btnSearchUpdate.Click += btnSearchUpdate_Click;
-            btnUpdateStatus.Click += btnUpdateStatus_Click;
+
             btnClearUpdate.Click += btnClearUpdate_Click;
 
 
@@ -97,10 +99,42 @@ namespace ParcelTrack.GUI
             lblWeightValue.Text = parcel.WeightKg.ToString("0.00") + " kg";
 
             // These details are not stored in the current Parcel class yet.
-            lblDeliveryServiceValue.Text = parcel.DeliveryServiceName;
+            // Display sender and recipient addresses
+            lblSenderAddressValue.Text = parcel.Sender.Address;
+            // Display delivery service
+            lblDeliveryServiceValue.Text =
+                string.IsNullOrWhiteSpace(parcel.DeliveryServiceName)
+                ? "Standard"
+                : parcel.DeliveryServiceName;
 
-            lblRegisteredDateValue.Text =
-                parcel.RegisteredDate.ToString("dd/MM/yyyy HH:mm");
+            // Display registered date
+            if (parcel.RegisteredDate != DateTime.MinValue)
+            {
+                lblRegisteredDateValue.Text =
+                    parcel.RegisteredDate.ToString("dd/MM/yyyy HH:mm");
+            }
+            else if (parcel.TrackingHistory.Count > 0)
+            {
+                lblRegisteredDateValue.Text =
+                    parcel.TrackingHistory.First().Timestamp.ToString("dd/MM/yyyy HH:mm");
+            }
+            else
+            {
+                lblRegisteredDateValue.Text = "-";
+            }
+            lblRecipientAddressValue.Text = parcel.Recipient.Address;
+
+
+            // Display the latest tracking location
+            if (parcel.TrackingHistory.Count > 0)
+            {
+                lblCurrentLocationValue.Text =
+                    parcel.TrackingHistory.Last().Location;
+            }
+            else
+            {
+                lblCurrentLocationValue.Text = "-";
+            }
 
             // Display tracking history
             dgvStatusUpdateHistory.Rows.Clear();
@@ -146,8 +180,13 @@ namespace ParcelTrack.GUI
                 return;
             }
 
-            ParcelStatus newStatus =
-                (ParcelStatus)cmbUpdateStatus.SelectedItem;
+            if (cmbUpdateStatus.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a new parcel status.");
+                return;
+            }
+
+            ParcelStatus newStatus = (ParcelStatus)cmbUpdateStatus.SelectedItem;
 
             if (newStatus == parcel.Status)
             {
@@ -169,7 +208,9 @@ namespace ParcelTrack.GUI
                 txtRemarks.Text.Trim());
 
             _trackingManager.AddTrackingEvent(parcel, newEvent);
-            
+
+            ParcelStatusChanged?.Invoke();
+
 
             txtCurrentStatus.Text = parcel.Status.ToString();
 
@@ -262,6 +303,16 @@ namespace ParcelTrack.GUI
         }
 
         private void UpdateStatusForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSenderNameValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
         {
 
         }
