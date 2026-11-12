@@ -28,26 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlCancelled = new System.Windows.Forms.Panel();
-            this.lblCancelledNumber = new System.Windows.Forms.Label();
-            this.lblCancelled = new System.Windows.Forms.Label();
-            this.pnlDelivered = new System.Windows.Forms.Panel();
-            this.lblDeliveredNumber = new System.Windows.Forms.Label();
-            this.lblDelivered = new System.Windows.Forms.Label();
-            this.pnlInTransit = new System.Windows.Forms.Panel();
-            this.lblTransitNumber = new System.Windows.Forms.Label();
-            this.lblTransitTitle = new System.Windows.Forms.Label();
-            this.pnlTotal = new System.Windows.Forms.Panel();
-            this.lblTotalParcel = new System.Windows.Forms.Label();
-            this.lblTotalTitle = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnTrack = new System.Windows.Forms.Button();
-            this.btnCalculator = new System.Windows.Forms.Button();
-            this.btnRecord = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnD0ashBoard = new System.Windows.Forms.Button();
@@ -88,10 +73,6 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnlCancelled.SuspendLayout();
-            this.pnlDelivered.SuspendLayout();
-            this.pnlInTransit.SuspendLayout();
-            this.pnlTotal.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSideBar.SuspendLayout();
@@ -105,134 +86,6 @@
             this.pnlUnderStatusUpdateHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatusUpdateHistory)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlCancelled
-            // 
-            this.pnlCancelled.AutoScroll = true;
-            this.pnlCancelled.BackColor = System.Drawing.Color.MistyRose;
-            this.pnlCancelled.Controls.Add(this.lblCancelledNumber);
-            this.pnlCancelled.Controls.Add(this.lblCancelled);
-            this.pnlCancelled.Location = new System.Drawing.Point(1365, 118);
-            this.pnlCancelled.Name = "pnlCancelled";
-            this.pnlCancelled.Size = new System.Drawing.Size(314, 110);
-            this.pnlCancelled.TabIndex = 7;
-            // 
-            // lblCancelledNumber
-            // 
-            this.lblCancelledNumber.AutoSize = true;
-            this.lblCancelledNumber.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCancelledNumber.Location = new System.Drawing.Point(130, 37);
-            this.lblCancelledNumber.Name = "lblCancelledNumber";
-            this.lblCancelledNumber.Size = new System.Drawing.Size(56, 65);
-            this.lblCancelledNumber.TabIndex = 4;
-            this.lblCancelledNumber.Text = "2";
-            // 
-            // lblCancelled
-            // 
-            this.lblCancelled.AutoSize = true;
-            this.lblCancelled.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCancelled.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblCancelled.Location = new System.Drawing.Point(109, 12);
-            this.lblCancelled.Name = "lblCancelled";
-            this.lblCancelled.Size = new System.Drawing.Size(97, 25);
-            this.lblCancelled.TabIndex = 4;
-            this.lblCancelled.Text = "Cancelled";
-            // 
-            // pnlDelivered
-            // 
-            this.pnlDelivered.AutoScroll = true;
-            this.pnlDelivered.BackColor = System.Drawing.Color.Honeydew;
-            this.pnlDelivered.Controls.Add(this.lblDeliveredNumber);
-            this.pnlDelivered.Controls.Add(this.lblDelivered);
-            this.pnlDelivered.Location = new System.Drawing.Point(1006, 118);
-            this.pnlDelivered.Name = "pnlDelivered";
-            this.pnlDelivered.Size = new System.Drawing.Size(314, 110);
-            this.pnlDelivered.TabIndex = 8;
-            // 
-            // lblDeliveredNumber
-            // 
-            this.lblDeliveredNumber.AutoSize = true;
-            this.lblDeliveredNumber.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeliveredNumber.Location = new System.Drawing.Point(126, 37);
-            this.lblDeliveredNumber.Name = "lblDeliveredNumber";
-            this.lblDeliveredNumber.Size = new System.Drawing.Size(56, 65);
-            this.lblDeliveredNumber.TabIndex = 3;
-            this.lblDeliveredNumber.Text = "7";
-            // 
-            // lblDelivered
-            // 
-            this.lblDelivered.AutoSize = true;
-            this.lblDelivered.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDelivered.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblDelivered.Location = new System.Drawing.Point(104, 12);
-            this.lblDelivered.Name = "lblDelivered";
-            this.lblDelivered.Size = new System.Drawing.Size(96, 25);
-            this.lblDelivered.TabIndex = 3;
-            this.lblDelivered.Text = "Delivered";
-            // 
-            // pnlInTransit
-            // 
-            this.pnlInTransit.AutoScroll = true;
-            this.pnlInTransit.BackColor = System.Drawing.Color.LemonChiffon;
-            this.pnlInTransit.Controls.Add(this.lblTransitNumber);
-            this.pnlInTransit.Controls.Add(this.lblTransitTitle);
-            this.pnlInTransit.Location = new System.Drawing.Point(637, 118);
-            this.pnlInTransit.Name = "pnlInTransit";
-            this.pnlInTransit.Size = new System.Drawing.Size(314, 110);
-            this.pnlInTransit.TabIndex = 9;
-            // 
-            // lblTransitNumber
-            // 
-            this.lblTransitNumber.AutoSize = true;
-            this.lblTransitNumber.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransitNumber.Location = new System.Drawing.Point(118, 37);
-            this.lblTransitNumber.Name = "lblTransitNumber";
-            this.lblTransitNumber.Size = new System.Drawing.Size(56, 65);
-            this.lblTransitNumber.TabIndex = 2;
-            this.lblTransitNumber.Text = "3";
-            // 
-            // lblTransitTitle
-            // 
-            this.lblTransitTitle.AutoSize = true;
-            this.lblTransitTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransitTitle.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTransitTitle.Location = new System.Drawing.Point(98, 12);
-            this.lblTransitTitle.Name = "lblTransitTitle";
-            this.lblTransitTitle.Size = new System.Drawing.Size(95, 25);
-            this.lblTransitTitle.TabIndex = 2;
-            this.lblTransitTitle.Text = "In Transit";
-            // 
-            // pnlTotal
-            // 
-            this.pnlTotal.AutoScroll = true;
-            this.pnlTotal.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pnlTotal.Controls.Add(this.lblTotalParcel);
-            this.pnlTotal.Controls.Add(this.lblTotalTitle);
-            this.pnlTotal.Location = new System.Drawing.Point(275, 118);
-            this.pnlTotal.Name = "pnlTotal";
-            this.pnlTotal.Size = new System.Drawing.Size(314, 110);
-            this.pnlTotal.TabIndex = 6;
-            // 
-            // lblTotalParcel
-            // 
-            this.lblTotalParcel.AutoSize = true;
-            this.lblTotalParcel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalParcel.Location = new System.Drawing.Point(114, 37);
-            this.lblTotalParcel.Name = "lblTotalParcel";
-            this.lblTotalParcel.Size = new System.Drawing.Size(84, 65);
-            this.lblTotalParcel.TabIndex = 3;
-            this.lblTotalParcel.Text = "12";
-            // 
-            // lblTotalTitle
-            // 
-            this.lblTotalTitle.AutoSize = true;
-            this.lblTotalTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalTitle.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTotalTitle.Location = new System.Drawing.Point(92, 12);
-            this.lblTotalTitle.Name = "lblTotalTitle";
-            this.lblTotalTitle.Size = new System.Drawing.Size(109, 25);
-            this.lblTotalTitle.TabIndex = 0;
-            this.lblTotalTitle.Text = "TotalParcel";
             // 
             // pnlHeader
             // 
@@ -261,9 +114,6 @@
             this.pnlSideBar.BackColor = System.Drawing.Color.MidnightBlue;
             this.pnlSideBar.Controls.Add(this.pictureBox3);
             this.pnlSideBar.Controls.Add(this.pictureBox2);
-            this.pnlSideBar.Controls.Add(this.btnTrack);
-            this.pnlSideBar.Controls.Add(this.btnCalculator);
-            this.pnlSideBar.Controls.Add(this.btnRecord);
             this.pnlSideBar.Controls.Add(this.btnUpdate);
             this.pnlSideBar.Controls.Add(this.btnRegister);
             this.pnlSideBar.Controls.Add(this.btnD0ashBoard);
@@ -293,53 +143,13 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // btnTrack
-            // 
-            this.btnTrack.AutoEllipsis = true;
-            this.btnTrack.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTrack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrack.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrack.ForeColor = System.Drawing.Color.White;
-            this.btnTrack.Location = new System.Drawing.Point(20, 260);
-            this.btnTrack.Name = "btnTrack";
-            this.btnTrack.Size = new System.Drawing.Size(210, 50);
-            this.btnTrack.TabIndex = 11;
-            this.btnTrack.Text = "Track Parcel";
-            this.btnTrack.UseVisualStyleBackColor = false;
-            // 
-            // btnCalculator
-            // 
-            this.btnCalculator.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalculator.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculator.ForeColor = System.Drawing.Color.White;
-            this.btnCalculator.Location = new System.Drawing.Point(20, 390);
-            this.btnCalculator.Name = "btnCalculator";
-            this.btnCalculator.Size = new System.Drawing.Size(210, 50);
-            this.btnCalculator.TabIndex = 10;
-            this.btnCalculator.Text = "Shipping Calculator";
-            this.btnCalculator.UseVisualStyleBackColor = false;
-            // 
-            // btnRecord
-            // 
-            this.btnRecord.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecord.ForeColor = System.Drawing.Color.White;
-            this.btnRecord.Location = new System.Drawing.Point(20, 455);
-            this.btnRecord.Name = "btnRecord";
-            this.btnRecord.Size = new System.Drawing.Size(210, 50);
-            this.btnRecord.TabIndex = 9;
-            this.btnRecord.Text = "Parcel Records";
-            this.btnRecord.UseVisualStyleBackColor = false;
-            // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.SteelBlue;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(20, 325);
+            this.btnUpdate.Location = new System.Drawing.Point(20, 259);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(210, 50);
             this.btnUpdate.TabIndex = 8;
@@ -376,9 +186,9 @@
             // 
             this.pnlUpdateParcelStatus.BackColor = System.Drawing.Color.Blue;
             this.pnlUpdateParcelStatus.Controls.Add(this.lblUpdateParcelStatus);
-            this.pnlUpdateParcelStatus.Location = new System.Drawing.Point(275, 234);
+            this.pnlUpdateParcelStatus.Location = new System.Drawing.Point(276, 130);
             this.pnlUpdateParcelStatus.Name = "pnlUpdateParcelStatus";
-            this.pnlUpdateParcelStatus.Size = new System.Drawing.Size(614, 88);
+            this.pnlUpdateParcelStatus.Size = new System.Drawing.Size(613, 192);
             this.pnlUpdateParcelStatus.TabIndex = 10;
             // 
             // lblUpdateParcelStatus
@@ -386,7 +196,7 @@
             this.lblUpdateParcelStatus.AutoSize = true;
             this.lblUpdateParcelStatus.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdateParcelStatus.ForeColor = System.Drawing.Color.White;
-            this.lblUpdateParcelStatus.Location = new System.Drawing.Point(117, 17);
+            this.lblUpdateParcelStatus.Location = new System.Drawing.Point(124, 17);
             this.lblUpdateParcelStatus.Name = "lblUpdateParcelStatus";
             this.lblUpdateParcelStatus.Size = new System.Drawing.Size(328, 45);
             this.lblUpdateParcelStatus.TabIndex = 4;
@@ -409,16 +219,16 @@
             this.pnlUnderUpdateParcelStatus.Controls.Add(this.lblCurrentStatus);
             this.pnlUnderUpdateParcelStatus.Controls.Add(this.txtTrackingNumber);
             this.pnlUnderUpdateParcelStatus.Controls.Add(this.lblTrackingNumber);
-            this.pnlUnderUpdateParcelStatus.Location = new System.Drawing.Point(275, 316);
+            this.pnlUnderUpdateParcelStatus.Location = new System.Drawing.Point(276, 212);
             this.pnlUnderUpdateParcelStatus.Name = "pnlUnderUpdateParcelStatus";
-            this.pnlUnderUpdateParcelStatus.Size = new System.Drawing.Size(614, 507);
+            this.pnlUnderUpdateParcelStatus.Size = new System.Drawing.Size(613, 611);
             this.pnlUnderUpdateParcelStatus.TabIndex = 11;
             // 
             // txtLocation
             // 
             this.txtLocation.Location = new System.Drawing.Point(7, 252);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(430, 20);
+            this.txtLocation.Size = new System.Drawing.Size(575, 20);
             this.txtLocation.TabIndex = 25;
             // 
             // lblLocation
@@ -439,7 +249,7 @@
             this.btnClearUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnClearUpdate.Location = new System.Drawing.Point(391, 450);
+            this.btnClearUpdate.Location = new System.Drawing.Point(390, 520);
             this.btnClearUpdate.Name = "btnClearUpdate";
             this.btnClearUpdate.Size = new System.Drawing.Size(208, 43);
             this.btnClearUpdate.TabIndex = 23;
@@ -453,9 +263,9 @@
             this.btnUpdateStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStatus.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateStatus.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateStatus.Location = new System.Drawing.Point(18, 435);
+            this.btnUpdateStatus.Location = new System.Drawing.Point(18, 497);
             this.btnUpdateStatus.Name = "btnUpdateStatus";
-            this.btnUpdateStatus.Size = new System.Drawing.Size(347, 68);
+            this.btnUpdateStatus.Size = new System.Drawing.Size(366, 85);
             this.btnUpdateStatus.TabIndex = 12;
             this.btnUpdateStatus.Text = "Update Status";
             this.btnUpdateStatus.UseVisualStyleBackColor = false;
@@ -463,10 +273,10 @@
             // 
             // txtRemarks
             // 
-            this.txtRemarks.Location = new System.Drawing.Point(7, 315);
+            this.txtRemarks.Location = new System.Drawing.Point(7, 344);
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(430, 101);
+            this.txtRemarks.Size = new System.Drawing.Size(575, 136);
             this.txtRemarks.TabIndex = 22;
             this.txtRemarks.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -475,7 +285,7 @@
             this.lblRemarks.AutoSize = true;
             this.lblRemarks.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRemarks.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblRemarks.Location = new System.Drawing.Point(9, 287);
+            this.lblRemarks.Location = new System.Drawing.Point(9, 315);
             this.lblRemarks.Name = "lblRemarks";
             this.lblRemarks.Size = new System.Drawing.Size(194, 25);
             this.lblRemarks.TabIndex = 21;
@@ -568,9 +378,9 @@
             // 
             this.pnlParcelDetails.BackColor = System.Drawing.Color.Orange;
             this.pnlParcelDetails.Controls.Add(this.lblParcelDetails);
-            this.pnlParcelDetails.Location = new System.Drawing.Point(1006, 234);
+            this.pnlParcelDetails.Location = new System.Drawing.Point(942, 130);
             this.pnlParcelDetails.Name = "pnlParcelDetails";
-            this.pnlParcelDetails.Size = new System.Drawing.Size(639, 71);
+            this.pnlParcelDetails.Size = new System.Drawing.Size(758, 175);
             this.pnlParcelDetails.TabIndex = 11;
             // 
             // lblParcelDetails
@@ -578,7 +388,7 @@
             this.lblParcelDetails.AutoSize = true;
             this.lblParcelDetails.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblParcelDetails.ForeColor = System.Drawing.Color.White;
-            this.lblParcelDetails.Location = new System.Drawing.Point(210, 17);
+            this.lblParcelDetails.Location = new System.Drawing.Point(278, 17);
             this.lblParcelDetails.Name = "lblParcelDetails";
             this.lblParcelDetails.Size = new System.Drawing.Size(221, 45);
             this.lblParcelDetails.TabIndex = 4;
@@ -597,9 +407,9 @@
             this.pnlUnderParcelDetails.Controls.Add(this.lblWeight);
             this.pnlUnderParcelDetails.Controls.Add(this.lblRecipientName);
             this.pnlUnderParcelDetails.Controls.Add(this.lblSenderName);
-            this.pnlUnderParcelDetails.Location = new System.Drawing.Point(1006, 299);
+            this.pnlUnderParcelDetails.Location = new System.Drawing.Point(942, 195);
             this.pnlUnderParcelDetails.Name = "pnlUnderParcelDetails";
-            this.pnlUnderParcelDetails.Size = new System.Drawing.Size(639, 222);
+            this.pnlUnderParcelDetails.Size = new System.Drawing.Size(758, 326);
             this.pnlUnderParcelDetails.TabIndex = 12;
             // 
             // lblRegisteredDateValue
@@ -706,9 +516,9 @@
             // 
             this.pnlStatusUpdateHistory.BackColor = System.Drawing.Color.Crimson;
             this.pnlStatusUpdateHistory.Controls.Add(this.lblStatusUpdateHistory);
-            this.pnlStatusUpdateHistory.Location = new System.Drawing.Point(1006, 527);
+            this.pnlStatusUpdateHistory.Location = new System.Drawing.Point(942, 527);
             this.pnlStatusUpdateHistory.Name = "pnlStatusUpdateHistory";
-            this.pnlStatusUpdateHistory.Size = new System.Drawing.Size(639, 88);
+            this.pnlStatusUpdateHistory.Size = new System.Drawing.Size(758, 88);
             this.pnlStatusUpdateHistory.TabIndex = 12;
             this.pnlStatusUpdateHistory.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlStatusUpdateHistory_Paint);
             // 
@@ -717,7 +527,7 @@
             this.lblStatusUpdateHistory.AutoSize = true;
             this.lblStatusUpdateHistory.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatusUpdateHistory.ForeColor = System.Drawing.Color.White;
-            this.lblStatusUpdateHistory.Location = new System.Drawing.Point(150, 13);
+            this.lblStatusUpdateHistory.Location = new System.Drawing.Point(199, 18);
             this.lblStatusUpdateHistory.Name = "lblStatusUpdateHistory";
             this.lblStatusUpdateHistory.Size = new System.Drawing.Size(349, 45);
             this.lblStatusUpdateHistory.TabIndex = 5;
@@ -727,9 +537,9 @@
             // 
             this.pnlUnderStatusUpdateHistory.BackColor = System.Drawing.Color.Pink;
             this.pnlUnderStatusUpdateHistory.Controls.Add(this.dgvStatusUpdateHistory);
-            this.pnlUnderStatusUpdateHistory.Location = new System.Drawing.Point(1006, 593);
+            this.pnlUnderStatusUpdateHistory.Location = new System.Drawing.Point(942, 593);
             this.pnlUnderStatusUpdateHistory.Name = "pnlUnderStatusUpdateHistory";
-            this.pnlUnderStatusUpdateHistory.Size = new System.Drawing.Size(639, 230);
+            this.pnlUnderStatusUpdateHistory.Size = new System.Drawing.Size(758, 230);
             this.pnlUnderStatusUpdateHistory.TabIndex = 13;
             // 
             // dgvStatusUpdateHistory
@@ -752,7 +562,7 @@
             this.dgvStatusUpdateHistory.ReadOnly = true;
             this.dgvStatusUpdateHistory.RowHeadersVisible = false;
             this.dgvStatusUpdateHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStatusUpdateHistory.Size = new System.Drawing.Size(611, 198);
+            this.dgvStatusUpdateHistory.Size = new System.Drawing.Size(730, 198);
             this.dgvStatusUpdateHistory.TabIndex = 14;
             this.dgvStatusUpdateHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTrackingHistory_CellContentClick);
             // 
@@ -784,7 +594,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1744, 861);
             this.Controls.Add(this.pnlUnderStatusUpdateHistory);
             this.Controls.Add(this.pnlStatusUpdateHistory);
@@ -792,10 +602,6 @@
             this.Controls.Add(this.pnlParcelDetails);
             this.Controls.Add(this.pnlUnderUpdateParcelStatus);
             this.Controls.Add(this.pnlUpdateParcelStatus);
-            this.Controls.Add(this.pnlCancelled);
-            this.Controls.Add(this.pnlDelivered);
-            this.Controls.Add(this.pnlInTransit);
-            this.Controls.Add(this.pnlTotal);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlSideBar);
             this.MaximizeBox = false;
@@ -803,14 +609,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParcelTrack - Update Parcel Status";
             this.Load += new System.EventHandler(this.UpdateStatusForm_Load);
-            this.pnlCancelled.ResumeLayout(false);
-            this.pnlCancelled.PerformLayout();
-            this.pnlDelivered.ResumeLayout(false);
-            this.pnlDelivered.PerformLayout();
-            this.pnlInTransit.ResumeLayout(false);
-            this.pnlInTransit.PerformLayout();
-            this.pnlTotal.ResumeLayout(false);
-            this.pnlTotal.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlSideBar.ResumeLayout(false);
@@ -834,27 +632,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlCancelled;
-        private System.Windows.Forms.Label lblCancelledNumber;
-        private System.Windows.Forms.Label lblCancelled;
-        private System.Windows.Forms.Panel pnlDelivered;
-        private System.Windows.Forms.Label lblDeliveredNumber;
-        private System.Windows.Forms.Label lblDelivered;
-        private System.Windows.Forms.Panel pnlInTransit;
-        private System.Windows.Forms.Label lblTransitNumber;
-        private System.Windows.Forms.Label lblTransitTitle;
-        private System.Windows.Forms.Panel pnlTotal;
-        private System.Windows.Forms.Label lblTotalParcel;
-        private System.Windows.Forms.Label lblTotalTitle;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlSideBar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnTrack;
-        private System.Windows.Forms.Button btnCalculator;
-        private System.Windows.Forms.Button btnRecord;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnD0ashBoard;

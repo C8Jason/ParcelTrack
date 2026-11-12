@@ -116,5 +116,14 @@
       <Name>ParcelTracker.Library</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glossy Red Warning Exclamation Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pastel Parcel Tracking Illustration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cartoon Parcel Delivery Route.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

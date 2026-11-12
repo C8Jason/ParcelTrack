@@ -115,6 +115,23 @@ namespace ParcelTrack.Library
                     parcel.AddTrackingEvent(trackingEvent);
                 }
 
+                // Create an initial event for old parcels with empty history
+                if (parcel.TrackingHistory.Count == 0)
+                {
+                    DateTime eventTime = parcel.RegisteredDate;
+
+                    if (eventTime == DateTime.MinValue)
+                        eventTime = DateTime.Now;
+
+                    TrackingEvent initialEvent = new TrackingEvent(
+                        parcel.Status,
+                        "Parcel Registration",
+                        "Parcel registered successfully.",
+                        eventTime);
+
+                    parcel.AddTrackingEvent(initialEvent);
+                }
+
                 parcels.Add(parcel);
             }
 

@@ -56,4 +56,11 @@ public class ParcelTracker
 
         return parcel.TrackingHistory;
     }
+
+    public void ClearAllParcels()
+    {
+        _parcels.Clear();
+    }
 }
+
+

@@ -57,25 +57,11 @@ namespace ParcelTrack.GUI
                 // Ensure the main layout panel of the update form stretches to fill the space
                 // e.g., if you have a main table layout or panel holding your update controls:
                 // pnlMainContent.Dock = DockStyle.Fill;
-            }
+            }   
         }
 
 
-        private void UpdateParcelStatistics()
-        {
-            var parcels = _parcelTracker.Parcels;
 
-            lblTotalParcel.Text = parcels.Count.ToString();
-
-            lblTransitNumber.Text = parcels.Count(
-                p => p.Status == ParcelStatus.InTransit).ToString();
-
-            lblDeliveredNumber.Text = parcels.Count(
-                p => p.Status == ParcelStatus.Delivered).ToString();
-
-            lblCancelledNumber.Text = parcels.Count(
-                p => p.Status == ParcelStatus.Cancelled).ToString();
-        }
 
 
         private void btnSearchUpdate_Click(object sender, EventArgs e)
@@ -183,7 +169,7 @@ namespace ParcelTrack.GUI
                 txtRemarks.Text.Trim());
 
             _trackingManager.AddTrackingEvent(parcel, newEvent);
-            UpdateParcelStatistics();
+            
 
             txtCurrentStatus.Text = parcel.Status.ToString();
 

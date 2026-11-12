@@ -118,19 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ParcelTrack_Truck_Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ParcelTrack_Truck_Banner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ParcelTrack_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ParcelTrack_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ParcelTrack Delivery Tracking Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ParcelTrack Delivery Tracking Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pastel Parcel Tracking Illustration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pastel Parcel Tracking Illustration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Blue Location Pin with Shipping Boxes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blue Location Pin with Shipping Boxes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ParcelTrack_Truck_Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ParcelTrack_Truck_Banner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ParcelTrack Logistics Banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ParcelTrack Logistics Banner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glossy Red Warning Exclamation Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Glossy Red Warning Exclamation Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cartoon Parcel Delivery Route" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cartoon Parcel Delivery Route.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

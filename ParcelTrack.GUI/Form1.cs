@@ -240,13 +240,6 @@ namespace ParcelTrack.GUI
                     trackingEvent.Description);
             }
 
-            MessageBox.Show(
-                "Parcel found successfully!\n\n" +
-                "Tracking Number: " + parcel.TrackingNumber +
-                "\nCurrent Status: " + parcel.Status,
-                "Search Successful",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
         }
 
         private void SetupDeliveryServices()
@@ -283,13 +276,17 @@ namespace ParcelTrack.GUI
             // Show Register Parcel page
             pnlRegisterPage.Visible = true;
             pnlRegisterPage.BringToFront();
-        }
+        }   
 
 
         private void btnRegisterParcel_Click(object sender, EventArgs e)
         {
             // 1. Get input values
-            string trackingNumber = txtTrackingNumber.Text.Trim();
+            // Generate tracking number automatically
+            string trackingNumber = GenerateTrackingNumber();
+
+            // Display tracking number in the read-only textbox
+            txtTrackingNumber.Text = trackingNumber;
             string senderName = txtSenderName.Text.Trim();
             string senderPhone = txtSenderPhone.Text.Trim();
             string senderAddress = txtSenderAddress.Text.Trim();
@@ -332,7 +329,11 @@ namespace ParcelTrack.GUI
 
             if (service == null)
             {
-                MessageBox.Show("Please select a delivery service.");
+                if (service == null)
+                {
+                    MessageBox.Show("Please select a delivery service.");
+                    return;
+                }
                 return;
             }
 
@@ -371,8 +372,26 @@ namespace ParcelTrack.GUI
                 // 8. Register parcel
                 _parcelTracker.RegisterParcel(parcel);
 
-                // 9. Save parcel data
+                // 9. Create initial tracking event
+                TrackingEvent initialEvent = new TrackingEvent(
+                    parcel.Status,
+                    parcel.Sender.Address,
+                    "Parcel registered successfully."
+                );
+
+                // 10. Add event to tracking history
+                _trackingManager.AddTrackingEvent(parcel, initialEvent);
+
+                // 11. Save parcel data
                 _parcelStorage.Save(_parcelTracker.Parcels);
+
+                // Check the saved JSON file
+                string savedJson = System.IO.File.ReadAllText(
+                    System.IO.Path.Combine(
+                        AppDomain.CurrentDomain.BaseDirectory,
+                        "parcels.json"));
+
+
 
                 // 10. Update Parcel Records table
                 dgvParcels.Rows.Add(
@@ -426,7 +445,78 @@ namespace ParcelTrack.GUI
             _parcelStorage.Save(_parcelTracker.Parcels);
         }
 
+        private string GenerateTrackingNumber()
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            Random random = new Random();
 
+            string trackingNumber;
+
+            do
+            {
+                trackingNumber = "PT" +
+                    new string(Enumerable.Range(0, 10)
+                    .Select(x => chars[random.Next(chars.Length)])
+                    .ToArray());
+            }
+            while (_parcelTracker.FindParcel(trackingNumber) != null);
+
+            return trackingNumber;
+        }
+
+        private void dgvParcels_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Ignore header clicks
+            if (e.RowIndex < 0 || e.ColumnIndex != 0)
+                return;
+
+            string trackingNumber =
+                dgvParcels.Rows[e.RowIndex].Cells[0].Value?.ToString();
+
+            if (!string.IsNullOrWhiteSpace(trackingNumber))
+            {
+                Clipboard.SetText(trackingNumber);
+
+                MessageBox.Show(
+                    "Tracking number copied!\n\n" + trackingNumber,
+                    "Copied Successfully",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnClearAllParcels_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to delete ALL parcels?",
+                "Confirm Deletion",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                // Clear all parcels from memory
+                _parcelTracker.ClearAllParcels();
+
+                // Clear Parcel Records table
+                dgvParcels.Rows.Clear();
+
+                // Clear Tracking History table
+                dgvTrackingHistory.Rows.Clear();
+
+                // Clear saved JSON data
+                _parcelStorage.Save(_parcelTracker.Parcels);
+
+                // Refresh Dashboard statistics
+                UpdateDashboardStatistics();
+
+                MessageBox.Show(
+                    "All parcels have been deleted successfully!",
+                    "Deletion Successful",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -622,12 +712,17 @@ namespace ParcelTrack.GUI
 
         }
 
-        private void btnRegisterParcel_Click_1(object sender, EventArgs e)
+        private void txtCalcWeight_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtCalcWeight_TextChanged(object sender, EventArgs e)
+        private void cmbCalcService_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchTrackingNumber_TextChanged(object sender, EventArgs e)
         {
 
         }

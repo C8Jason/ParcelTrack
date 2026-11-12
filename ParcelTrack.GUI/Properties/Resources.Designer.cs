@@ -73,6 +73,26 @@ namespace ParcelTrack.GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cartoon_Parcel_Delivery_Route {
+            get {
+                object obj = ResourceManager.GetObject("Cartoon Parcel Delivery Route", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Glossy_Red_Warning_Exclamation_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Glossy Red Warning Exclamation Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ParcelTrack_Delivery_Tracking_Logo {
             get {
                 object obj = ResourceManager.GetObject("ParcelTrack Delivery Tracking Logo", resourceCulture);
@@ -106,6 +126,16 @@ namespace ParcelTrack.GUI.Properties {
         internal static System.Drawing.Bitmap ParcelTrack_Truck_Banner {
             get {
                 object obj = ResourceManager.GetObject("ParcelTrack_Truck_Banner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pastel_Parcel_Tracking_Illustration {
+            get {
+                object obj = ResourceManager.GetObject("Pastel Parcel Tracking Illustration", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
